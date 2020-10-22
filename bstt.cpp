@@ -51,7 +51,7 @@ return root;
 //    if(key < root->data){
 //     del(root->left, key);
 //    }
-//    else if(key > root->data){
+//    else if(key > root->data){  
 //     del(root->right, key);
 //    }
     
