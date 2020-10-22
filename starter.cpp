@@ -26,6 +26,21 @@ node* build(){
 return root;
 }
 
+node* bst(node* root, int d){
+    if(root == NULL){
+        return new node(d);
+    }
+    if(d < root->data){
+        root->left = bst(root->left, d);
+    }
+    else if(d > root->data){
+        root->right = bst(root->right, d);
+    }
+    else{
+        return new node(d);
+    }
+return root;
+}
 
 
 
