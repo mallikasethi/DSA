@@ -26,24 +26,6 @@ node* build(){
 return root;
 }
 
-// bst 
-node* bst(node* root, int d){
-    if(root == NULL){
-        return new node(d);
-    }
-    if(d < root->data){
-        root->left = bst(root->left, d);
-    }
-    else if(d > root->data){
-        root->right = bst(root->right, d);
-    }
-    else{
-        return new node(d);
-    }
-return root;
-}
-
-
 void printPre(node* root){
     if(root == NULL){
         return;
@@ -53,9 +35,28 @@ void printPre(node* root){
     printPre(root->right);
 }
 
+bool search(node* root, int d){
+    if(root == NULL){
+        return false;
+    }
+    if(root->data == d){
+        return true;
+    }
+    search(root->left, d);
+    search(root->right,d);
+return false;
+}
+
 int main(){
     node* root = build();
-    bst(root, 100);
-    printPre(root);
+    
+    bool ans = search(root, 100);
+    if(ans){
+        cout<<"present";
+    }
+    else{
+        cout<<"not present";
+    }
+   
     return 0;
 }
