@@ -112,7 +112,7 @@ node* del(node* root, int key){
                 temp->left = root->left;
                 delete root;
                 return temp;
-                 
+                //  this is wrong .. not accountd for all the cases .only one case taken
         }
     }
 return root;
