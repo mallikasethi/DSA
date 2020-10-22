@@ -43,20 +43,7 @@ node* bst(node* root, int d){
 return root;
 }
 
-// node* del(node* root, int key){
-//    // first search
-//    if(root == NULL){
-//        return NULL;
-//    }
-//    if(key < root->data){
-//     del(root->left, key);
-//    }
-//    else if(key > root->data){  
-//     del(root->right, key);
-//    }
-    
-  
-// }
+
 
 
 void printPre(node* root){
